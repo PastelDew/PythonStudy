@@ -2,6 +2,7 @@
 import importlib
 TestBase = importlib.import_module("TestBase", "......").TestBase
 
+# >오픈채팅방<
 # 정답률: 59.91%
 # 소요 시간: 9: 00
 class Quiz(TestBase):
