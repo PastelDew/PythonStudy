@@ -2,6 +2,8 @@
 import importlib
 TestBase = importlib.import_module("TestBase", "......").TestBase
 
+# 정답률: 59.91%
+# 소요 시간: 9: 00
 class Quiz(TestBase):
     def __init__(self, name="오픈채팅방"):
         self.name = name
@@ -15,7 +17,30 @@ class Quiz(TestBase):
         ]
 
     def solution(self, record):
-        print(record)
+        str_enter = "{}님이 들어왔습니다."
+        str_leave = "{}님이 나갔습니다."
+
+        userMap = {}
+        log = []
+        for rec in record:
+            data = rec.split(" ")
+            if data[0] == "Change":
+                userMap[data[1]] = data[2]
+            else:
+                if data[0] == "Enter":
+                    userMap[data[1]] = data[2]
+                log.append({
+                    "log": data[0],
+                    "uid": data[1]
+                })
+        
+        answer = []
+        for l in log:
+            if l["log"] == "Enter":
+                answer.append(str_enter.format(userMap[l["uid"]]))
+            else:
+                answer.append(str_leave.format(userMap[l["uid"]]))
+        return answer
 
 """
 오픈채팅방
