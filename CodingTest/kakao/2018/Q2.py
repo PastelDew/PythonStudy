@@ -18,6 +18,12 @@ class Quiz(TestBase):
             (4, [4,4,4,4,4])
         ]
 
+    def createAnswers(self):
+        return [
+            [3, 4, 2, 1, 5],
+            [4, 1, 2, 3]
+        ]
+
     def solution(self, record):
         N, stages = record
         answer = {}

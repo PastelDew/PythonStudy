@@ -17,6 +17,11 @@ class Quiz(TestBase):
             ["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"]
         ]
 
+    def createAnswers(self):
+        return [
+            ['Prodo님이 들어왔습니다.', 'Ryan님이 들어왔습니다.', 'Prodo님이 나갔습니다.', 'Prodo님이 들어왔습니다.']
+        ]
+
     def solution(self, record):
         str_enter = "{}님이 들어왔습니다."
         str_leave = "{}님이 나갔습니다."

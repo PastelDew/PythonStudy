@@ -24,6 +24,11 @@ class Quiz(TestBase):
             ]
         ]
 
+    def createAnswers(self):
+        return [
+            2
+        ]
+
     def solution(self, relation):
         rowLength = len(relation)
         colLength = len(relation[0])

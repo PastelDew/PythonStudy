@@ -12,7 +12,8 @@ def createSolutions():
     for quiz in importArray:
         solutions.append({
             "name": quiz.getName(),
-            "testcases": quiz.createTestCases,
+            "testcases": quiz.createTestCases(),
+            "answers": quiz.createAnswers(),
             "solution": quiz.solution
         })
         

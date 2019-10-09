@@ -11,6 +11,12 @@ class TestBase:
             ["SampleData - 1"],
             ["SampleData - 2"]
         ]
+    
+    def createAnswers(self):
+        return [
+            ["SampleData - 1"],
+            ["SampleData - 2"]
+        ]
 
     def solution(self, params):
-        print(params)
+        return params
